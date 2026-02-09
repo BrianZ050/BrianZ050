@@ -1,0 +1,103 @@
+/* Ugly Styles for TWP Assignment */
+
+body {
+    background-color: #ffff00;
+    /* Bright Yellow */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif;
+    color: #ff00ff;
+    /* Magenta */
+    margin: 50px;
+    border: 20px dashed #0000ff;
+    /* Blue dashed border */
+}
+
+h1 {
+    background-color: #00ff00;
+    /* Lime Green */
+    color: #ff0000;
+    /* Red */
+    font-size: 4em;
+    text-align: right;
+    border-bottom: 10px double #000000;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-shadow: 5px 5px 0px #0000ff;
+}
+
+h2 {
+    background-color: #000000;
+    /* Black */
+    color: #00ffff;
+    /* Cyan */
+    font-size: 3em;
+    border: 5px solid #ff00ff;
+    /* Magenta solid border */
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    transform: rotate(-2deg);
+}
+
+p {
+    background-color: #0000ff;
+    /* Blue */
+    color: #ffff00;
+    /* Yellow */
+    font-size: 1.5em;
+    line-height: 1.2;
+    padding: 30px;
+    margin: 20px 0;
+    border: 5px ridge #ff0000;
+    /* Red ridge border */
+    font-weight: bold;
+}
+
+ul,
+ol {
+    background-color: #ff00ff;
+    /* Magenta */
+    border: 10px groove #00ff00;
+    /* Lime Green groove border */
+    padding: 40px;
+    list-style-type: square;
+}
+
+li {
+    color: #ffffff;
+    /* White */
+    background-color: #000000;
+    /* Black */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px dotted #ffff00;
+    /* Yellow dotted border */
+}
+
+a {
+    color: #00ff00;
+    /* Lime Green */
+    background-color: #ff0000;
+    /* Red */
+    font-size: 1.5em;
+    text-decoration: overline underline;
+    text-transform: lowercase;
+    font-weight: 900;
+    padding: 5px;
+}
+
+a:hover {
+    cursor: help;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 2em;
+}
+
+img {
+    border: 15px inset #ff6600;
+    /* Orange inset border */
+    filter: invert(100%);
+    width: 50%;
+    margin-left: 25%;
+    transform: skew(10deg);
+}
