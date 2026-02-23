@@ -11,6 +11,35 @@ body {
     /* Blue dashed border */
 }
 
+.site-nav {
+    background-color: #1a252f;
+    padding: 12px 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+}
+
+.site-nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    font-size: 1.05em;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.site-nav a:hover {
+    background-color: #34495e;
+    color: #fff;
+}
+
+.site-nav a.active {
+    background-color: #3498db;
+    color: #fff;
+}
+
 h1 {
     background-color: #00ff00;
     /* Lime Green */
