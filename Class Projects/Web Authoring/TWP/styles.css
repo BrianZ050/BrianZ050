@@ -440,13 +440,11 @@ td i.fa-amazon { color: #ff9900; }
     width: 160px;
     margin: 0 0 20px 25px;
     border-radius: 8px;
-    background-color: #34495e;
-    padding: 12px;
 }
 
 .author-portrait {
     float: right;
-    width: 180px;
+    width: 150px;
     margin: 0 0 20px 25px;
     border-radius: 8px;
     border: 1px solid #ccc;
