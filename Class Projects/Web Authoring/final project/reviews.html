@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Reviews | First Draft</title>
+	<link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+	<header id="top">
+		<h1>Online Reviews: First Draft</h1>
+		<nav aria-label="Page navigation">
+			<ul>
+				<li><a href="#flipper-review">Review 1: Flipper Zero</a></li>
+				<li><a href="#wifi-board-review">Review 2: Official Wi-Fi Development Board</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<article id="flipper-review">
+			<a class="jump" href="#top">Back to top</a>
+			<h1>Flipper Zero Review: The Ultimate Pocket Multi-Tool or Just a Pricey Gadget?</h1>
+			<p><span class="label">By:</span>Brian Z | <span class="label">Date:</span><time datetime="2026-03-30">March 30, 2026</time></p>
+			<p>
+				<span class="label">Rating:</span>
+				<span class="stars" aria-label="4 out of 5 stars">★★★★☆</span>
+				<span class="rating-note">4.0/5</span>
+			</p>
+
+			<div class="review-grid">
+				<div class="review-sidebar">
+					<section class="review-meta" aria-labelledby="flipper-info">
+						<h2 id="flipper-info">Basic Information</h2>
+						<p><span class="label">Item:</span>Portable hardware multi-tool</p>
+						<p><span class="label">Name:</span><em>Flipper Zero</em></p>
+						<p><span class="label">Manufacturer:</span>Flipper Devices</p>
+						<p><span class="label">Category:</span>Sub-GHz, NFC, RFID, IR, GPIO testing and exploration</p>
+						<p><span class="label">Power:</span>Rechargeable battery, up to about one week of typical use</p>
+						<p><span class="label">Format:</span>Pocket handheld with microSD storage</p>
+						<p><span class="label">List price:</span>About $169 to $199 depending on bundle/region</p>
+						<p>
+							<span class="label">Access link:</span>
+							<a href="https://shop.flipperzero.one/">Official Flipper Zero store page</a>
+						</p>
+
+						<figure>
+							<img src="images/Flipper_Zero.jpg" alt="Original illustration of a Flipper-style handheld hardware multi-tool.">
+							<figcaption>
+								Image created by reviewer for this draft.
+							</figcaption>
+						</figure>
+					</section>
+
+					<aside class="pros-cons" aria-labelledby="flipper-pros-cons">
+						<h3 id="flipper-pros-cons">Pros and Cons</h3>
+						<p><strong>Pros:</strong> Excellent protocol coverage, unified interface, strong open-source community, highly portable.</p>
+						<p><strong>Cons:</strong> Limited Sub-GHz transmission range, shallow on-device analytics, premium price for plastic build.</p>
+					</aside>
+
+					<section class="sources" aria-labelledby="flipper-links">
+						<h3 id="flipper-links">Reference and Further Reading Links</h3>
+						<ul>
+							<li><a href="https://docs.flipper.net/">Reference: Official Flipper documentation</a></li>
+							<li><a href="https://github.com/flipperdevices/flipperzero-firmware">Reference: Official firmware repository</a></li>
+							<li><a href="https://www.tomshardware.com/reviews/flipper-zero-review">Further reading: Third-party review and use cases</a></li>
+							<li><a href="https://blog.flipper.net/">Existential/Further reading: Flipper official blog</a></li>
+						</ul>
+					</section>
+				</div>
+
+				<section>
+					<h2>Review</h2>
+					<p>
+						If you spend any time in the hardware enthusiast space, you have undoubtedly seen the Flipper Zero. Pitched as a "Tamagotchi for hackers," this device is a highly versatile multi-tool that interacts with a wide range of physical access control systems and wireless protocols. Out of the box, the hardware packs an impressive amount of tech into a single, pocket-sized unit, featuring built-in support for <a href="https://en.wikipedia.org/wiki/ISM_radio_band">Sub-GHz frequencies</a>, <a href="https://en.wikipedia.org/wiki/Near-field_communication">Near Field Communication (NFC)</a>, <a href="https://en.wikipedia.org/wiki/Radio-frequency_identification">Radio Frequency Identification (RFID)</a>, <a href="https://en.wikipedia.org/wiki/Infrared">Infrared</a>, and a set of <a href="https://en.wikipedia.org/wiki/General-purpose_input/output">General Purpose Input Output (GPIO) pins</a>. You navigate these protocols on a retro-style monochrome screen featuring a virtual cyber-dolphin that earns experience points as you use the different antennas, adding a brilliant layer of gamification to everyday hardware exploration. Whether you are cloning a standard hotel key card with the NFC module, triggering public televisions via the Infrared transceiver, or capturing signals from wireless restaurant pagers on the 433 MHz band, the Flipper Zero makes interacting with invisible wireless infrastructure incredibly accessible. Powered by open-source firmware and boasting a battery life of up to a week, it is built to be a reliable daily driver for extended testing sessions.
+					</p>
+					<p>
+						The absolute standout feature of the Flipper Zero is its remarkably unified user interface. Before this device hit the market, testing different physical protocols meant lugging around a tangled mess of dedicated hardware, like the <a href="https://proxmark.com/">Proxmark3</a> for RFID and the <a href="https://greatscottgadgets.com/hackrf/one/">HackRF One</a> for Sub-GHz signals. The Flipper consolidates all of that functionality into one sleek plastic shell, allowing you to quickly read, save, and emulate signals using just an intuitive directional pad, entirely untethered from a computer. Furthermore, the massive open-source community backing this project is a massive selling point. With thousands of developers constantly pushing custom firmware branches and new applications, the device's capabilities are always expanding. You can easily jump into existing code repositories to add powerful features, such as <a href="https://en.wikipedia.org/wiki/Time-based_one-time_password">two-factor authentication token generation (TOTP)</a> or "bad USB" payload execution, which emulates a standard keyboard to rapidly run text scripts on a target machine. Because the device seamlessly stores all captured payloads on an external microSD card, building and managing a massive library of saved signals is incredibly smooth and responsive.
+					</p>
+					<p>
+						Despite its stellar feature set, the Flipper Zero is held back by a few frustrating hardware limitations, most notably the incredibly short range of its internal Sub-GHz antenna. In practice, you have to stand awkwardly close to a target receiver to successfully transmit a signal; trying to trigger a legacy garage door from across the street will almost certainly fail unless you bolt an external antenna module to the device's GPIO pins, completely ruining its sleek form factor. Additionally, the native software lacks the horsepower for deep signal analysis. While it is fantastic for capturing raw signals on the go, you still have to transfer those files to a desktop computer to actually decipher the data packet structure, and the tiny screen makes scrolling through long lists of captured data a tedious chore. Finally, there is the price tag. Retailing at nearly two hundred dollars, the unit asks a hefty premium for the convenience of consolidation, especially given its plastic casing, which is notoriously slippery and prone to scratching, virtually mandating the purchase of a separate silicone sleeve.
+					</p>
+					<p>
+						Ultimately, the Flipper Zero is a phenomenal, conversation-starting piece of hardware that serves as the perfect entry point into exploring radio frequency and access control. However, to truly get your money's worth, you need to be willing to dive into the custom firmware community and accept that its ultra-portable convenience comes at the cost of broadcast range and deep on-device analytics.
+					</p>
+
+				</section>
+			</div>
+		</article>
+
+		<article id="wifi-board-review">
+			<a class="jump" href="#top">Back to top</a>
+			<h1>Official Wi-Fi Development Board: An Essential Network Analysis Expansion Marred by Fragile Physical Design</h1>
+			<p><span class="label">By:</span>Brian Z | <span class="label">Date:</span><time datetime="2026-03-30">March 30, 2026</time></p>
+			<p>
+				<span class="label">Rating:</span>
+				<span class="stars" aria-label="4 out of 5 stars">★★★★☆</span>
+				<span class="rating-note">4.0/5</span>
+			</p>
+
+			<div class="review-grid">
+				<div class="review-sidebar">
+					<section class="review-meta" aria-labelledby="wifi-info">
+						<h2 id="wifi-info">Basic Information</h2>
+						<p><span class="label">Item:</span>Flipper Zero expansion module</p>
+						<p><span class="label">Name:</span><em>Official Wi-Fi Development Board</em></p>
+						<p><span class="label">Core chip:</span><a href="https://www.espressif.com/en/products/socs/esp32-s2">Espressif ESP32-S2</a></p>
+						<p><span class="label">Primary purpose:</span>Wi-Fi debugging, monitor mode workflows, and development</p>
+						<p><span class="label">Connection:</span>GPIO header on Flipper Zero, USB-C for flashing/debug</p>
+						<p><span class="label">Format:</span>Bare PCB module with onboard Wi-Fi antenna</p>
+						<p><span class="label">List price:</span>Varies by region and store availability</p>
+						<p>
+							<span class="label">Access link:</span>
+							<a href="https://shop.flipperzero.one/products/wifi-devboard">Official Wi-Fi Dev Board product page</a>
+						</p>
+
+						<figure>
+							<img src="images/Wifi_Board.jpg" alt="Original illustration of a Wi-Fi development board with antenna.">
+							<figcaption>
+								Image created by reviewer for this draft.
+							</figcaption>
+						</figure>
+					</section>
+
+					<aside class="pros-cons" aria-labelledby="wifi-pros-cons">
+						<h3 id="wifi-pros-cons">Pros and Cons</h3>
+						<p><strong>Pros:</strong> Adds practical Wi-Fi capability, supports monitor workflows, portable and power-efficient.</p>
+						<p><strong>Cons:</strong> Exposed PCB is fragile, accessory costs add up, stock antenna performance is modest.</p>
+					</aside>
+
+					<section class="sources" aria-labelledby="wifi-links">
+						<h3 id="wifi-links">Reference and Further Reading Links</h3>
+						<ul>
+							<li><a href="https://docs.flipper.net/development/hardware/wifi-developer-board">Reference: Official Wi-Fi Dev Board documentation</a></li>
+							<li><a href="https://www.espressif.com/en/products/socs/esp32-s2">Reference: ESP32-S2 technical overview</a></li>
+							<li><a href="https://www.aircrack-ng.org/doku.php?id=cracking_wpa">Further reading: WPA handshake workflow background</a></li>
+							<li><a href="https://www.wireshark.org/docs/wsug_html_chunked/">Further reading: Wireshark user guide</a></li>
+						</ul>
+					</section>
+				</div>
+
+				<section>
+					<h2>Review</h2>
+					<p>
+						For all the incredible radios packed into the base Flipper Zero, it ships with one glaring omission: it lacks built-in Wi-Fi. Enter the Official Wi-Fi Development Board, an essential expansion module that plugs directly into the GPIO pins resting on the top of the main device. By introducing an ESP32-S2 microchip to the ecosystem, this board completely solves the base unit's inability to interact with standard local area networks. Out of the box, it serves as a handy debugging tool for developers writing custom code, but its true value is unlocked when you flash it with custom firmware via a standard USB-C connection. Once set up, the module transforms the Flipper Zero from a simple short-range radio multi-tool into a remarkably capable 2.4 GHz wireless analysis platform. You can monitor network traffic in real time directly on Flipper's screen, making it a powerful tool for anyone evaluating the security of modern commercial and residential networking equipment.
+					</p>
+					<p>
+						The defining positive feature of this development board is its native support for both monitor mode and Wi-Fi packet injection workflows. When properly configured, this module becomes a dedicated network scanner that effortlessly identifies nearby <a href="https://en.wikipedia.org/wiki/Wireless_access_point">access points</a> and captures handshake data from connecting clients. This allows you to clearly visualize exactly how wireless networks handle authentication and provides a practical way to capture hash data from routers. Having access to these powerful, high-level capabilities in such a highly portable format is a game-changer; it completely eliminates the hassle of booting up a heavy laptop and configuring external USB wireless adapters just to run a quick facility walkthrough. Furthermore, the hardware is incredibly power-efficient. Because it draws minimal power from the <a href="https://flipperzero.one/">Flipper Zero</a>'s main battery, you can run continuous network scans for hours without draining your device. Once you are back at your desk, you can feed the captured data files into industry-standard desktop software like <a href="https://www.wireshark.org/">Wireshark</a> to deeply inspect the unencrypted management frames.
+					</p>
+					<p>
+						Unfortunately, the physical construction of this board is a massive oversight that severely detracts from the user experience. The module ships as a bare <a href="https://en.wikipedia.org/wiki/Printed_circuit_board">printed circuit board</a>, with components fully exposed and delicate connector pins. Because the manufacturer decided not to include a protective casing in the standard retail package, attaching this board to your Flipper creates a fragile, top-heavy assembly that feels like it will snap at any moment. Tossing the assembled unit into a backpack is a recipe for disaster, as the pressure can easily bend the GPIO pins or damage exposed components. To safely use this board in the real world, you are effectively forced to spend extra time and money 3D-printing a custom enclosure or tracking down a third-party case online to prevent accidental short circuits. Additionally, the board's compact onboard antenna can struggle in signal-challenging environments, which can further undermine the tool's pocketable convenience.
+					</p>
+					<p>
+						If you want to use your Flipper Zero to analyze wireless protocols or audit local networks, the Official Wi-Fi Development Board is an absolute must-have, delivering excellent technical performance. However, buyers need to factor in the hidden costs: leaving the circuitry exposed guarantees eventual hardware failure, so you must account for the cost of a protective case and understand that range may be limited in tougher environments.
+					</p>
+
+				</section>
+			</div>
+		</article>
+	</main>
+</body>
+</html>
