@@ -1,0 +1,256 @@
+:root {
+	--bg: #0b1016;
+	--panel: #121a23;
+	--panel-soft: #17212d;
+	--ink: #e9f0f6;
+	--muted: #a6b8c8;
+	--line: #2b3a4a;
+	--accent: #4dd2a8;
+	--accent-2: #53a7ff;
+	--warning: #ffce67;
+	--tool: #4dd2a8;
+	--surface: #ff8b5e;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+	line-height: 1.6;
+	color: var(--ink);
+	background:
+		radial-gradient(circle at 16% 5%, rgba(83, 167, 255, 0.14), transparent 35%),
+		radial-gradient(circle at 82% 12%, rgba(77, 210, 168, 0.14), transparent 35%),
+		linear-gradient(180deg, #0a0f14 0%, #0f1720 50%, #0b1016 100%);
+}
+
+.site-header,
+main {
+	width: min(1180px, 94vw);
+	margin: 0 auto;
+}
+
+.site-header {
+	padding: 2.5rem 0 1.5rem;
+}
+
+.kicker {
+	margin: 0;
+	font-size: 0.82rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 700;
+}
+
+h1 {
+	margin: 0.2rem 0 0;
+	font-size: clamp(2rem, 4.4vw, 3.3rem);
+	line-height: 1.1;
+}
+
+.subtitle {
+	margin: 0.7rem 0 0;
+	color: var(--muted);
+	font-size: clamp(1rem, 2.1vw, 1.25rem);
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.9rem;
+	margin: 1.2rem 0 0;
+	padding: 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--ink);
+	background: rgba(83, 167, 255, 0.12);
+	border: 1px solid rgba(83, 167, 255, 0.28);
+	padding: 0.35rem 0.7rem;
+	border-radius: 999px;
+	font-size: 0.92rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	background: rgba(77, 210, 168, 0.16);
+	border-color: rgba(77, 210, 168, 0.4);
+}
+
+.panel {
+	background: linear-gradient(165deg, var(--panel) 0%, var(--panel-soft) 100%);
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	padding: 1.25rem;
+	margin: 0 0 1.2rem;
+	box-shadow: 0 18px 35px rgba(0, 0, 0, 0.28);
+}
+
+h2 {
+	margin: 0 0 0.5rem;
+	font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+}
+
+.preface p,
+.section-head p {
+	margin: 0.6rem 0 0;
+	color: var(--muted);
+}
+
+.section-head {
+	margin-bottom: 0.9rem;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+	gap: 0.9rem;
+}
+
+figure {
+	margin: 0;
+	background: #0f1620;
+	border: 1px solid var(--line);
+	border-radius: 11px;
+	overflow: hidden;
+}
+
+figure img {
+	display: block;
+	width: 100%;
+	height: 210px;
+	object-fit: cover;
+	filter: contrast(1.05) saturate(0.9);
+}
+
+.toolkit-grid figure img {
+	border-bottom: 3px solid rgba(77, 210, 168, 0.5);
+}
+
+.surface-grid figure img {
+	border-bottom: 3px solid rgba(255, 139, 94, 0.55);
+}
+
+figcaption {
+	padding: 0.65rem 0.75rem 0.8rem;
+	font-size: 0.92rem;
+	color: var(--muted);
+}
+
+figcaption strong {
+	color: var(--ink);
+}
+
+.matrix {
+	overflow-x: auto;
+}
+
+.legend-text {
+	margin: 0.2rem 0 0.8rem;
+	color: var(--muted);
+}
+
+.risk-chart {
+	overflow-x: auto;
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	background: #0b1219;
+	padding: 0.35rem;
+	margin-bottom: 0.8rem;
+}
+
+.risk-chart svg {
+	display: block;
+	width: 100%;
+	min-width: 1040px;
+	height: auto;
+}
+
+.chart-bg {
+	fill: rgba(83, 167, 255, 0.05);
+}
+
+.axis {
+	stroke: #d8e5f0;
+	stroke-width: 2;
+}
+
+.grid {
+	stroke: rgba(216, 229, 240, 0.22);
+	stroke-width: 1;
+	stroke-dasharray: 4 6;
+}
+
+.tick {
+	fill: #dbe9f5;
+	font-size: 16px;
+}
+
+.item-label {
+	fill: #dbe9f5;
+	font-size: 13px;
+}
+
+.bar-tool {
+	fill: rgba(77, 210, 168, 0.85);
+}
+
+.bar-surface {
+	fill: rgba(255, 139, 94, 0.88);
+}
+
+.pairings {
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	padding: 0.55rem 0.7rem;
+	background: rgba(255, 206, 103, 0.06);
+	color: #e6eef5;
+	font-size: 0.9rem;
+	margin-bottom: 0.75rem;
+}
+
+.pairings p {
+	margin: 0.25rem 0;
+}
+
+.legend {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 0.75rem;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.swatch {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	margin-right: 0.4rem;
+	vertical-align: middle;
+}
+
+.swatch.tool {
+	background: var(--tool);
+}
+
+.swatch.surface {
+	background: var(--surface);
+}
+
+@media (max-width: 680px) {
+	.panel {
+		padding: 1rem;
+	}
+
+	figure img {
+		height: 190px;
+	}
+}

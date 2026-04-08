@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Physicality of Digital Safety | Inventory Page</title>
+	<link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+	<header class="site-header" id="top">
+		<p class="kicker">Prototype Inventory Page</p>
+		<h1>The Physicality of Digital Safety</h1>
+		<p class="subtitle">An Inventory of Adversarial Tools and the Campus Attack Surface</p>
+		<nav aria-label="Section navigation">
+			<ul>
+				<li><a href="#preface">Intro</a></li>
+				<li><a href="#toolkit">Adversarial Toolkit</a></li>
+				<li><a href="#surface">Campus Attack Surface</a></li>
+				<li><a href="#matrix">Risk-Signal Matrix</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="preface" class="panel preface">
+			<h2>Intro / Preface</h2>
+			<p>
+				In the modern academic environment, the boundary between physical safety and digital privacy has dissolved. Many students still imagine cybersecurity as code hidden behind screens, but on a smart campus, risk is tactile, material, and carried by objects we touch every day. This page presents an ontography: a structured inventory of devices and infrastructures that shape safety on Rutgers-like campuses. By documenting these items side by side, the page argues that privacy is anchored in the physical world and is constantly vulnerable to hardware-based exploitation.
+			</p>
+			<p>
+				The first group, The Adversarial Toolkit, catalogs handheld hardware used to bypass or audit security boundaries. These are not abstract programs but concrete tools such as the Flipper Zero, HackRF One, and BadUSB devices that can capture, replay, inject, or manipulate real-world signals. Their accessibility demonstrates how offensive capability has moved from specialized labs into everyday student spaces.
+			</p>
+			<p>
+				The second group, The Campus Attack Surface, inventories routine infrastructure students trust: ID scanners, dorm locks, NFC payment readers, charging stations, and public Wi-Fi prompts. Together, these objects form the physical skin of digital vulnerability. The goal is to teach readers to look past plastic casings and recognize the radio, electrical, and protocol layers beneath them. The resulting perspective is practical: security awareness improves when we understand not only software, but the physical systems that broadcast, store, and expose us.
+			</p>
+		</section>
+
+		<section id="toolkit" class="panel">
+			<div class="section-head">
+				<h2>Group A: The Adversarial Toolkit</h2>
+				<p>Visual direction: top-down shots on a dark technical surface to emphasize precision, hardware detail, and repeatable comparison.</p>
+			</div>
+
+			<div class="gallery toolkit-grid">
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of Flipper Zero on a dark technical surface.">
+					<figcaption><strong>Flipper Zero</strong> | Sub-GHz, NFC, RFID replay and analysis.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of HackRF One style SDR setup on a desk mat.">
+					<figcaption><strong>HackRF One</strong> | Wide-spectrum software-defined radio sniffing.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of USB Rubber Ducky style keystroke injection tool.">
+					<figcaption><strong>USB Rubber Ducky / BadUSB</strong> | Automated keystroke injection.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of ESP32 board loaded with Wi-Fi Marauder firmware.">
+					<figcaption><strong>ESP32 + Marauder</strong> | Wi-Fi deauth, scan, and packet workflows.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of high-gain external Wi-Fi adapter.">
+					<figcaption><strong>High-Gain Wi-Fi Adapter</strong> | Extended-range wireless interception.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="Top-down view of Proxmark3 or handheld RFID card cloner.">
+					<figcaption><strong>Proxmark3 / Card Cloner</strong> | Badge protocol auditing and emulation.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section id="surface" class="panel">
+			<div class="section-head">
+				<h2>Group B: The Campus Attack Surface</h2>
+				<p>Visual direction: student POV perspective in everyday motion spaces to show where trust and vulnerability overlap.</p>
+			</div>
+
+			<div class="gallery surface-grid">
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of library or gym ID scanner near entrance.">
+					<figcaption><strong>Library/Gym ID Scanner</strong> | Identity, location, and access event checkpoint.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of dormitory electronic deadbolt on student room door.">
+					<figcaption><strong>Dorm Electronic Deadbolt</strong> | Physical barrier controlled by radio protocol.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of vending machine NFC payment reader.">
+					<figcaption><strong>Vending NFC Reader</strong> | Transaction privacy and tokenized payment surface.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of public USB charging station in student center.">
+					<figcaption><strong>Public USB Charging Station</strong> | Potential juice-jacking vector.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of smart classroom control panel.">
+					<figcaption><strong>Smart Classroom Panel</strong> | IR/Sub-GHz interface with weak default configs.</figcaption>
+				</figure>
+				<figure>
+					<img src="images/placeholder.svg" alt="POV shot of free internet public Wi-Fi sign.">
+					<figcaption><strong>Public Wi-Fi Signage</strong> | Social hook for rogue access-point attacks.</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section id="matrix" class="panel matrix">
+			<h2>Risk-Signal Matrix (Chart Graph)</h2>
+			<p class="legend-text">Horizontal bars map each item to a risk score on a 1 to 5 scale, with frequency/protocol shown beside the item label.</p>
+
+			<div class="risk-chart" role="img" aria-label="Bar chart of risk severity for adversarial tools and campus targets.">
+				<svg viewBox="0 0 1100 660" aria-hidden="true">
+					<rect x="310" y="40" width="690" height="552" class="chart-bg"></rect>
+
+					<line x1="310" y1="592" x2="1000" y2="592" class="axis"></line>
+					<line x1="310" y1="40" x2="310" y2="592" class="axis"></line>
+
+					<line x1="448" y1="40" x2="448" y2="592" class="grid"></line>
+					<line x1="586" y1="40" x2="586" y2="592" class="grid"></line>
+					<line x1="724" y1="40" x2="724" y2="592" class="grid"></line>
+					<line x1="862" y1="40" x2="862" y2="592" class="grid"></line>
+					<line x1="1000" y1="40" x2="1000" y2="592" class="grid"></line>
+
+					<text x="305" y="620" class="tick">1</text>
+					<text x="443" y="620" class="tick">2</text>
+					<text x="581" y="620" class="tick">3</text>
+					<text x="719" y="620" class="tick">4</text>
+					<text x="857" y="620" class="tick">5</text>
+
+					<text x="15" y="66" class="item-label">A Flipper Zero (315 / 433 MHz)</text>
+					<rect x="310" y="50" width="690" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="112" class="item-label">A HackRF One (1 MHz to 6 GHz)</text>
+					<rect x="310" y="96" width="552" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="158" class="item-label">A USB Rubber Ducky (USB HID)</text>
+					<rect x="310" y="142" width="414" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="204" class="item-label">A ESP32 + Marauder (2.4 GHz)</text>
+					<rect x="310" y="188" width="552" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="250" class="item-label">A High-Gain Adapter (2.4 / 5 GHz)</text>
+					<rect x="310" y="234" width="552" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="296" class="item-label">A Proxmark3 / Cloner (125 kHz + 13.56 MHz)</text>
+					<rect x="310" y="280" width="552" height="26" class="bar-tool"></rect>
+
+					<text x="15" y="342" class="item-label">B Library/Gym ID Scanner (13.56 MHz)</text>
+					<rect x="310" y="326" width="552" height="26" class="bar-surface"></rect>
+
+					<text x="15" y="388" class="item-label">B Dorm Electronic Deadbolt (Sub-GHz)</text>
+					<rect x="310" y="372" width="690" height="26" class="bar-surface"></rect>
+
+					<text x="15" y="434" class="item-label">B Vending NFC Reader (13.56 MHz)</text>
+					<rect x="310" y="418" width="276" height="26" class="bar-surface"></rect>
+
+					<text x="15" y="480" class="item-label">B Public USB Charging Station (USB Data)</text>
+					<rect x="310" y="464" width="414" height="26" class="bar-surface"></rect>
+
+					<text x="15" y="526" class="item-label">B Smart Classroom Panel (IR / Sub-GHz)</text>
+					<rect x="310" y="510" width="414" height="26" class="bar-surface"></rect>
+
+					<text x="15" y="572" class="item-label">B Public Wi-Fi Signage (2.4 / 5 GHz)</text>
+					<rect x="310" y="556" width="552" height="26" class="bar-surface"></rect>
+				</svg>
+			</div>
+
+			<div class="pairings" aria-label="Tool to target pairings">
+				<p><strong>Pairing:</strong> Flipper Zero -> Sub-GHz -> Dorm Electronic Deadbolt</p>
+				<p><strong>Pairing:</strong> Proxmark3 / Cloner -> 13.56 MHz -> Library/Gym ID Scanner</p>
+				<p><strong>Pairing:</strong> ESP32 + Marauder -> 2.4 GHz -> Public Wi-Fi Signage</p>
+			</div>
+
+			<div class="legend">
+				<span><i class="swatch tool"></i> Group A Tool</span>
+				<span><i class="swatch surface"></i> Group B Target</span>
+			</div>
+		</section>
+
+	</main>
+</body>
+</html>
