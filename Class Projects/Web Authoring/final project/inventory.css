@@ -156,67 +156,71 @@ figcaption strong {
 	color: var(--muted);
 }
 
-.risk-chart {
-	overflow-x: auto;
+.attack-graph {
+	display: grid;
+	gap: 0.6rem;
+	padding: 0.7rem;
 	border: 1px solid var(--line);
 	border-radius: 12px;
 	background: #0b1219;
-	padding: 0.35rem;
-	margin-bottom: 0.8rem;
 }
 
-.risk-chart svg {
-	display: block;
-	width: 100%;
-	min-width: 1040px;
-	height: auto;
-}
-
-.chart-bg {
-	fill: rgba(83, 167, 255, 0.05);
-}
-
-.axis {
-	stroke: #d8e5f0;
-	stroke-width: 2;
-}
-
-.grid {
-	stroke: rgba(216, 229, 240, 0.22);
-	stroke-width: 1;
-	stroke-dasharray: 4 6;
-}
-
-.tick {
-	fill: #dbe9f5;
-	font-size: 16px;
-}
-
-.item-label {
-	fill: #dbe9f5;
-	font-size: 13px;
-}
-
-.bar-tool {
-	fill: rgba(77, 210, 168, 0.85);
-}
-
-.bar-surface {
-	fill: rgba(255, 139, 94, 0.88);
-}
-
-.pairings {
+.attack-row {
+	display: grid;
+	grid-template-columns: minmax(150px, 1fr) 28px minmax(180px, 1.2fr) minmax(130px, 0.8fr) 52px;
+	align-items: center;
+	gap: 0.55rem;
+	padding: 0.45rem 0.55rem;
 	border: 1px solid var(--line);
-	border-radius: 10px;
-	padding: 0.55rem 0.7rem;
-	background: rgba(255, 206, 103, 0.06);
-	color: #e6eef5;
-	font-size: 0.9rem;
-	margin-bottom: 0.75rem;
+	border-radius: 9px;
+	background: rgba(15, 22, 32, 0.9);
 }
 
-.pairings p {
-	margin: 0.25rem 0;
+.node {
+	font-size: 0.9rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.tool-node {
+	color: var(--tool);
+}
+
+.surface-node {
+	color: #ffd0bf;
+}
+
+.arrow {
+	text-align: center;
+	color: #dbe9f5;
+	font-weight: 700;
+}
+
+.risk-track {
+	height: 11px;
+	border-radius: 999px;
+	background: #253141;
+	border: 1px solid #32435a;
+	overflow: hidden;
+}
+
+.risk-fill {
+	display: block;
+	height: 100%;
+	background: linear-gradient(90deg, #ffce67 0%, #ff8b5e 100%);
+	width: 20%;
+}
+
+.attack-row.r2 .risk-fill { width: 40%; }
+.attack-row.r3 .risk-fill { width: 60%; }
+.attack-row.r4 .risk-fill { width: 80%; }
+.attack-row.r5 .risk-fill { width: 100%; }
+
+.risk-tag {
+	text-align: right;
+	font-weight: 700;
+	color: #ffe1a4;
+	font-size: 0.88rem;
 }
 
 .legend {
@@ -252,5 +256,14 @@ figcaption strong {
 
 	figure img {
 		height: 190px;
+	}
+
+	.attack-row {
+		grid-template-columns: 1fr 28px 1fr;
+	}
+
+	.attack-row .risk-track,
+	.attack-row .risk-tag {
+		grid-column: 1 / -1;
 	}
 }

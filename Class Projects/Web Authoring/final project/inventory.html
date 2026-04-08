@@ -78,7 +78,7 @@
 			<div class="gallery surface-grid">
 				<figure>
 					<img src="images/placeholder.svg" alt="POV shot of library or gym ID scanner near entrance.">
-					<figcaption><strong>Garage Door</strong> | Identity, location, and access event checkpoint.</figcaption>
+					<figcaption><strong>Garage Door</strong> | Identity, location, checkpoint.</figcaption>
 				</figure>
 				<figure>
 					<img src="images/placeholder.svg" alt="POV shot of dormitory electronic deadbolt on student room door.">
@@ -94,7 +94,7 @@
 				</figure>
 				<figure>
 					<img src="images/placeholder.svg" alt="POV shot of smart classroom control panel.">
-					<figcaption><strong>TV</strong> | IRinterface with weak default configs.</figcaption>
+					<figcaption><strong>TV</strong> | IR interface with weak default configs.</figcaption>
 				</figure>
 				<figure>
 					<img src="images/placeholder.svg" alt="POV shot of free internet public Wi-Fi sign.">
@@ -104,70 +104,66 @@
 		</section>
 
 		<section id="matrix" class="panel matrix">
-			<h2>Risk-Signal Matrix (Chart Graph)</h2>
-			<p class="legend-text">Horizontal bars map each item to a risk score on a 1 to 5 scale, with frequency/protocol shown beside the item label.</p>
+			<h2>Attack Link Graph</h2>
+			<p class="legend-text">Each row shows a likely attack path from Group A tool to Group B target, with risk scored from 1 (low) to 5 (high).</p>
 
-			<div class="risk-chart" role="img" aria-label="Bar chart of risk severity for adversarial tools and campus targets.">
-				<svg viewBox="0 0 1100 660" aria-hidden="true">
-					<rect x="310" y="40" width="690" height="552" class="chart-bg"></rect>
-
-					<line x1="310" y1="592" x2="1000" y2="592" class="axis"></line>
-					<line x1="310" y1="40" x2="310" y2="592" class="axis"></line>
-
-					<line x1="448" y1="40" x2="448" y2="592" class="grid"></line>
-					<line x1="586" y1="40" x2="586" y2="592" class="grid"></line>
-					<line x1="724" y1="40" x2="724" y2="592" class="grid"></line>
-					<line x1="862" y1="40" x2="862" y2="592" class="grid"></line>
-					<line x1="1000" y1="40" x2="1000" y2="592" class="grid"></line>
-
-					<text x="305" y="620" class="tick">1</text>
-					<text x="443" y="620" class="tick">2</text>
-					<text x="581" y="620" class="tick">3</text>
-					<text x="719" y="620" class="tick">4</text>
-					<text x="857" y="620" class="tick">5</text>
-
-					<text x="15" y="66" class="item-label">A Flipper Zero (315 / 433 MHz)</text>
-					<rect x="310" y="50" width="690" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="112" class="item-label">A HackRF One (1 MHz to 6 GHz)</text>
-					<rect x="310" y="96" width="552" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="158" class="item-label">A USB Rubber Ducky (USB HID)</text>
-					<rect x="310" y="142" width="414" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="204" class="item-label">A ESP32 + Marauder (2.4 GHz)</text>
-					<rect x="310" y="188" width="552" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="250" class="item-label">A High-Gain Adapter (2.4 / 5 GHz)</text>
-					<rect x="310" y="234" width="552" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="296" class="item-label">A Proxmark3 / Cloner (125 kHz + 13.56 MHz)</text>
-					<rect x="310" y="280" width="552" height="26" class="bar-tool"></rect>
-
-					<text x="15" y="342" class="item-label">B Library/Gym ID Scanner (13.56 MHz)</text>
-					<rect x="310" y="326" width="552" height="26" class="bar-surface"></rect>
-
-					<text x="15" y="388" class="item-label">B Dorm Electronic Deadbolt (Sub-GHz)</text>
-					<rect x="310" y="372" width="690" height="26" class="bar-surface"></rect>
-
-					<text x="15" y="434" class="item-label">B Vending NFC Reader (13.56 MHz)</text>
-					<rect x="310" y="418" width="276" height="26" class="bar-surface"></rect>
-
-					<text x="15" y="480" class="item-label">B Public USB Charging Station (USB Data)</text>
-					<rect x="310" y="464" width="414" height="26" class="bar-surface"></rect>
-
-					<text x="15" y="526" class="item-label">B Smart Classroom Panel (IR / Sub-GHz)</text>
-					<rect x="310" y="510" width="414" height="26" class="bar-surface"></rect>
-
-					<text x="15" y="572" class="item-label">B Public Wi-Fi Signage (2.4 / 5 GHz)</text>
-					<rect x="310" y="556" width="552" height="26" class="bar-surface"></rect>
-				</svg>
-			</div>
-
-			<div class="pairings" aria-label="Tool to target pairings">
-				<p><strong>Pairing:</strong> Flipper Zero -> Sub-GHz -> Dorm Electronic Deadbolt</p>
-				<p><strong>Pairing:</strong> Proxmark3 / Cloner -> 13.56 MHz -> Library/Gym ID Scanner</p>
-				<p><strong>Pairing:</strong> ESP32 + Marauder -> 2.4 GHz -> Public Wi-Fi Signage</p>
+			<div class="attack-graph" role="img" aria-label="Simple graph showing which tools can attack which campus targets and their risk levels.">
+				<div class="attack-row r5">
+					<span class="node tool-node">Flipper Zero</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Dorm Building RFID Scanner</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">5/5</span>
+				</div>
+				<div class="attack-row r4">
+					<span class="node tool-node">HackRF One</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Garage Door Receiver</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">4/5</span>
+				</div>
+				<div class="attack-row r4">
+					<span class="node tool-node">USB Rubber Ducky</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Public USB Charging Station</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">4/5</span>
+				</div>
+				<div class="attack-row r4">
+					<span class="node tool-node">ESP32 + Marauder</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Public Wi-Fi</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">4/5</span>
+				</div>
+				<div class="attack-row r5">
+					<span class="node tool-node">O.MG Cable</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Public USB Charging Station</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">5/5</span>
+				</div>
+				<div class="attack-row r3">
+					<span class="node tool-node">Flipper Zero</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Vending NFC Reader</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">3/5</span>
+				</div>
+				<div class="attack-row r3">
+					<span class="node tool-node">HackRF One</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">TV (IR Interface)</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">3/5</span>
+				</div>
+				<div class="attack-row r4">
+					<span class="node tool-node">Pwnagotchi</span>
+					<span class="arrow">-></span>
+					<span class="node surface-node">Public Wi-Fi</span>
+					<div class="risk-track" aria-hidden="true"><span class="risk-fill"></span></div>
+					<span class="risk-tag">4/5</span>
+				</div>
 			</div>
 
 			<div class="legend">
