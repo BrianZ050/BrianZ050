@@ -3,12 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>The Physicality of Digital Safety | Inventory Page</title>
-	<link rel="stylesheet" href="./inventory.css?v=20260413-2">
+	<title>The Physicality of Digital Safety | Pictorial Page</title>
+	<link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="pictorial-page">
 	<header class="site-shell">
-		<a class="site-logo" href="index.html" aria-label="Go to home page">RDS Lab</a>
+		<a class="site-logo" href="index.html" aria-label="Go to home page">
+			<img src="images/site-logo.svg" alt="RDS Lab home">
+		</a>
 		<nav class="site-nav" aria-label="Site navigation">
 			<ul>
 				<li><a href="reviews.html">Reviews</a></li>
@@ -21,7 +23,7 @@
 	</header>
 
 	<header class="site-header" id="top">
-		<p class="kicker">Prototype Inventory Page</p>
+		<p class="kicker">Revised Draft Pictorial Page</p>
 		<h1>The Physicality of Digital Safety</h1>
 		<p class="subtitle">An Inventory of Adversarial Tools and the Campus Attack Surface</p>
 		<nav aria-label="Section navigation">
@@ -54,6 +56,16 @@
 				<p>Visual direction: top-down shots on a dark technical surface to emphasize precision, hardware detail, and repeatable comparison.</p>
 			</div>
 
+			<div class="group-data" aria-label="Group A data summary">
+				<h3>Group A Data Snapshot</h3>
+				<ul>
+					<li><strong>Images in group:</strong> 6</li>
+					<li><strong>Primary protocols represented:</strong> Sub-GHz, NFC, RFID, Wi-Fi, USB HID, IR</li>
+					<li><strong>Primary context:</strong> handheld or portable offensive/audit hardware</li>
+					<li><strong>Typical usage mode:</strong> active probing, replay, injection, and collection</li>
+				</ul>
+			</div>
+
 			<div class="gallery toolkit-grid">
 				<figure>
 					<img src="images/Flipper_Zero.jpg" alt="Top-down view of Flipper Zero on a dark technical surface.">
@@ -80,12 +92,31 @@
 					<figcaption><strong>pwnogatchi</strong> | Passive, autonomous Wi-Fi exploitation.</figcaption>
 				</figure>
 			</div>
+
+			<div class="group-detail">
+				<p>
+					This group documents the hardware layer of adversarial capability on a campus-scale network. The six tools shown here are all compact enough to fit in a backpack and can be deployed quickly without a traditional lab setup. In practical risk terms, that mobility is the key variable: lower setup time means more opportunities for misuse in everyday locations such as residence halls, parking gates, and student centers.
+				</p>
+				<p>
+					The shared pattern across the group is protocol leverage. Instead of brute-force software attacks, these devices target trust assumptions in radio and physical interfaces, including near-field cards, legacy remotes, open Wi-Fi negotiation, and default USB behavior. The images are meant to show that modern attack capability is no longer rare or exotic hardware; it is inexpensive, modular, and physically ordinary.
+				</p>
+			</div>
 		</section>
 
 		<section id="surface" class="panel">
 			<div class="section-head">
 				<h2>Group B: The Campus Attack Surface</h2>
 				<p>Visual direction: student POV perspective in everyday motion spaces to show where trust and vulnerability overlap.</p>
+			</div>
+
+			<div class="group-data" aria-label="Group B data summary">
+				<h3>Group B Data Snapshot</h3>
+				<ul>
+					<li><strong>Images in group:</strong> 6</li>
+					<li><strong>Infrastructure classes:</strong> entry control, payment systems, shared utilities, media, and public network access</li>
+					<li><strong>Primary environment:</strong> high-traffic campus zones with mixed user trust</li>
+					<li><strong>Common risk type:</strong> low-visibility protocol abuse during routine use</li>
+				</ul>
 			</div>
 
 			<div class="gallery surface-grid">
@@ -113,6 +144,15 @@
 					<img src="images/wifi.jpg" alt="POV shot of free internet public Wi-Fi sign.">
 					<figcaption><strong>Public Wi-Fi</strong> | Social hook for rogue access-point attacks.</figcaption>
 				</figure>
+			</div>
+
+			<div class="group-detail">
+				<p>
+					This group captures the infrastructure layer that students interact with constantly and often without scrutiny. Each image represents a convenience technology that also exposes one or more protocol surfaces. When these systems are viewed individually, risk can seem isolated, but collectively they form an interconnected trust environment where identities, locations, and transactions are continuously exchanged.
+				</p>
+				<p>
+					The design choice to use first-person campus angles is deliberate. It reframes cybersecurity as lived experience rather than abstract policy. Readers should be able to map these examples directly to their daily route and understand that vulnerabilities are usually not hidden in code editors; they are embedded in ordinary objects that mediate access, payment, and connectivity.
+				</p>
 			</div>
 		</section>
 
