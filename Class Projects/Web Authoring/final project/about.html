@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Rutgers Digital Safety Layer</title>
+  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body class="about-page">
+  <header class="site-shell">
+    <a class="site-logo" href="index.html" aria-label="Go to home page">
+      <img src="images/site-logo.svg" alt="RDS Lab home">
+    </a>
+    <nav class="site-nav" aria-label="Site navigation">
+      <ul>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="inventory.html">Pictorial</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="site-header about-hero">
+    <p class="kicker">About</p>
+    <h1>About the Rutgers Digital Safety Layer</h1>
+    <p class="subtitle">Who made this site, and how the project has evolved.</p>
+  </header>
+
+  <main>
+    <section class="panel contributors-panel" aria-labelledby="contributors-title">
+      <div class="section-head">
+        <h2 id="contributors-title">Contributor Profiles</h2>
+        <p class="map-note">Profiles include portrait, role, and a short professional bio for the site editor and collaborators.</p>
+      </div>
+
+      <div class="profile-grid">
+        <article class="contributor-card">
+          <figure>
+            <img src="images/placeholder.svg" alt="Site editor portrait placeholder">
+            <figcaption>Site editor</figcaption>
+          </figure>
+          <div class="contrib-copy">
+            <h3>Brian Z.</h3>
+            <p class="contrib-role">Site Editor — Project Lead</p>
+            <p class="contrib-bio">Brian curated location data, designed the visual language, and coordinated the site build. Brian's research focuses on human-centered security and campus privacy design.</p>
+          </div>
+        </article>
+
+        <article class="contributor-card">
+          <figure>
+            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <figcaption>Research & data</figcaption>
+          </figure>
+          <div class="contrib-copy">
+            <h3>Alex Moreno</h3>
+            <p class="contrib-role">Data Analyst</p>
+            <p class="contrib-bio">Alex collected and cleaned spatial data, validated coordinates, and built the marker dataset. Alex specializes in mapping workflows and reproducible pipelines.</p>
+          </div>
+        </article>
+
+        <article class="contributor-card">
+          <figure>
+            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <figcaption>Design & accessibility</figcaption>
+          </figure>
+          <div class="contrib-copy">
+            <h3>Dr. Samira Patel</h3>
+            <p class="contrib-role">Interaction Designer</p>
+            <p class="contrib-bio">Samira designed the site interactions and accessibility features, ensuring popups and profiles remained keyboard and screen-reader friendly.</p>
+          </div>
+        </article>
+
+        <article class="contributor-card">
+          <figure>
+            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <figcaption>Frontend & testing</figcaption>
+          </figure>
+          <div class="contrib-copy">
+            <h3>Jordan Lee</h3>
+            <p class="contrib-role">Frontend Developer</p>
+            <p class="contrib-bio">Jordan implemented the interactive map, marker styling, and responsive layout. They also coordinated cross-browser testing and performance checks.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel history-panel" aria-labelledby="history-title">
+      <div class="section-head">
+        <h2 id="history-title">Project History</h2>
+        <p class="map-note">A short fictional timeline showing how the project grew from idea to prototype.</p>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <time datetime="2023-09">Sep 2023</time>
+          <h3>Research kickoff</h3>
+          <p>Initial campus interviews and early field notes. The team mapped high-traffic routes and sketched the first safety-layer concept.</p>
+          <img src="images/placeholder.svg" alt="early sketch"/>
+        </li>
+
+        <li>
+          <time datetime="2024-02">Feb 2024</time>
+          <h3>Data sprint</h3>
+          <p>Alex ran a data sprint to collect coordinates and validate node descriptions. The dataset reached its first stable release.</p>
+        </li>
+
+        <li>
+          <time datetime="2024-10">Oct 2024</time>
+          <h3>Prototype & usability</h3>
+          <p>First interactive prototype using Leaflet was released to a small test group. Feedback led to improved popups and clearer legend items.</p>
+        </li>
+
+        <li>
+          <time datetime="2025-04">Apr 2025</time>
+          <h3>Public demo</h3>
+          <p>The project was shown at a campus demo day. A short demo video was produced to explain the idea to non-technical audiences.</p>
+        </li>
+      </ol>
+
+      <!-- audio and video removed per request -->
+
+    </section>
+
+    <section class="panel credits-panel" aria-labelledby="about-credits">
+      <h2 id="about-credits">Credits & License</h2>
+      <p>This fictional project was created for a class assignment. Map layers on other pages use CARTO and OpenStreetMap data where noted; site code and content here are original to the project authors.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Rutgers Digital Safety Lab (fictional), All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

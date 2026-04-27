@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Map | Rutgers Digital Safety Layer</title>
+	<link rel="stylesheet" href="site.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+	<link rel="stylesheet" href="map.css">
+	<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script defer src="map.js"></script>
+</head>
+<body class="map-page">
+	<header class="site-shell">
+		<a class="site-logo" href="index.html" aria-label="Go to home page">
+			<img src="images/site-logo.svg" alt="RDS Lab home">
+		</a>
+		<nav class="site-nav" aria-label="Site navigation">
+			<ul>
+				<li><a href="reviews.html">Reviews</a></li>
+				<li><a href="inventory.html">Pictorial</a></li>
+				<li><a href="map.html" aria-current="page">Map</a></li>
+				<li><a href="#profiles">Profiles</a></li>
+				<li><a href="#credits">Credits</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<header class="site-header map-hero" id="top">
+		<p class="kicker">Map Page</p>
+		<h1>The Rutgers New Brunswick Digital Safety Layer</h1>
+		<p class="subtitle">A campus map of connected zones where identity, power, network access, and comfort overlap.</p>
+		<nav aria-label="Page navigation">
+			<ul>
+				<li><a href="#map">Map</a></li>
+				<li><a href="#profiles">Location profiles</a></li>
+				<li><a href="#legend">Legend</a></li>
+				<li><a href="#credits">Credits</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section class="panel overview-grid" aria-labelledby="overview-title">
+			<div>
+				<p class="section-kicker">Why this map matters</p>
+				<h2 id="overview-title">Campus life is a linked system, not a set of isolated spots.</h2>
+				<p>
+					The map below treats Rutgers New Brunswick as a digital safety layer: a network of gates, shared devices, transit edges, and late-night spaces that continually exchange trust signals. A badge scan affects a residence hall. A public charger affects the student center. A Wi-Fi node affects the library, the bus stop, and the walk home. The point of the page is not just to mark locations, but to show how one layer of campus life ripples into the others.
+				</p>
+				<p>
+					Each marker opens a popup with a short summary and a link to a deeper profile lower on the page. The profiles expand the same idea with location views, descriptive data, and symbolic ratings so the relationships are readable at a glance and still detailed enough for analysis.
+				</p>
+			</div>
+			<aside class="overview-card" aria-labelledby="layer-title">
+				<h2 id="layer-title">Layer Summary</h2>
+				<ul class="layer-list">
+					<li><strong>Access control:</strong> gates, lobbies, and card readers</li>
+					<li><strong>Connectivity:</strong> Wi-Fi, transit nodes, and shared network edges</li>
+					<li><strong>Utility:</strong> charging, media, and other shared infrastructure</li>
+					<li><strong>Commerce and routine:</strong> payment kiosks, vending, and food spaces</li>
+				</ul>
+			</aside>
+		</section>
+
+		<section class="panel map-panel" id="map" aria-labelledby="map-title">
+			<div class="section-head">
+				<div>
+					<p class="section-kicker">Interactive draft map</p>
+					<h2 id="map-title">Campus nodes and the links between them</h2>
+				</div>
+				<p class="map-note">This version uses a real Leaflet basemap. Select a marker to open a popup and jump to the matching profile below.</p>
+			</div>
+
+			<div class="map-stage">
+				<div id="leaflet-map" class="leaflet-map" aria-label="Leaflet map of Rutgers New Brunswick and connected campus safety locations."></div>
+			</div>
+
+			<div class="legend-grid" id="legend" aria-label="Map legend">
+				<div class="legend-item">
+					<span class="legend-mark legend-access"><svg aria-hidden="true"><use href="#icon-shield"></use></svg></span>
+					<div>
+						<h3>Access control</h3>
+						<p>Markers for gates, lobbies, and other verification points.</p>
+					</div>
+				</div>
+				<div class="legend-item">
+					<span class="legend-mark legend-connect"><svg aria-hidden="true"><use href="#icon-wifi"></use></svg></span>
+					<div>
+						<h3>Connectivity</h3>
+						<p>Markers for Wi-Fi, network spillover, and shared digital access.</p>
+					</div>
+				</div>
+				<div class="legend-item">
+					<span class="legend-mark legend-utility"><svg aria-hidden="true"><use href="#icon-plug"></use></svg></span>
+					<div>
+						<h3>Utility and media</h3>
+						<p>Markers for charging, screens, and shared infrastructure.</p>
+					</div>
+				</div>
+				<div class="legend-item">
+					<span class="legend-mark legend-commerce"><svg aria-hidden="true"><use href="#icon-card"></use></svg></span>
+					<div>
+						<h3>Commerce</h3>
+						<p>Markers for payment kiosks, vending, and routine purchases.</p>
+					</div>
+				</div>
+				<div class="legend-item">
+					<span class="legend-mark legend-route"><svg aria-hidden="true"><use href="#icon-beacon"></use></svg></span>
+					<div>
+						<h3>Night route</h3>
+						<p>Markers for late-path safety, transit edges, and wayfinding nodes.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="panel profiles-panel" id="profiles" aria-labelledby="profiles-title">
+			<div class="section-head">
+				<div>
+					<p class="section-kicker">Expanded profiles</p>
+					<h2 id="profiles-title">Location cards with views, data, and symbolic ratings</h2>
+				</div>
+				<p class="map-note">The profile ratings use dot bars. More filled dots mean more exposure or more comfort, depending on the label.</p>
+			</div>
+
+			<div class="profile-grid">
+				<article class="location-card" id="college-ave-gate">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for College Avenue gate.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>College Avenue Gate</h3>
+						<p>The gate is the first visible layer of the safety stack. It sets the tone for what the campus expects from people, devices, and movement. Because so many routes and routines pass through it, a policy or hardware change here ripples outward quickly.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Access control and boundary setting</dd></div>
+							<div><dt>Systems</dt><dd>ID scan, cameras, and visitor flow</dd></div>
+							<div><dt>Interlocks</dt><dd>Parking, housing, and transit access</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="2 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="parking-pay-station">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for parking pay station.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Parking Deck Pay Station</h3>
+						<p>The pay station looks routine, but it connects money, movement, and identity in one place. As a result, a transaction here is never just a transaction; it is also a timestamp, a location trace, and part of a larger circulation pattern.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Payment edge and vehicle access</dd></div>
+							<div><dt>Systems</dt><dd>Card reader, plate capture, and receipt data</dd></div>
+							<div><dt>Interlocks</dt><dd>Transit timing, weather, and evening load</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="3 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="3 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="library-wifi-commons">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for library Wi-Fi commons.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Alexander Library Wi-Fi Commons</h3>
+						<p>This is the most visibly networked layer on the map. Laptops, phones, printers, and research traffic all overlap here, so the place reveals how ordinary study habits depend on constant digital negotiation.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Connectivity and collaborative study</dd></div>
+							<div><dt>Systems</dt><dd>Wi-Fi, printing, cloud logins, and shared desks</dd></div>
+							<div><dt>Interlocks</dt><dd>Research deadlines, class schedules, and device charging</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="5 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="student-center-charging-bar">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for student center charging bar.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Student Center Charging Bar</h3>
+						<p>Power access sounds simple, but in a digital safety layer it is also a trust decision. Once people plug in, they hand over a device dependency that can shape how long they stay, what they share, and how exposed their hardware becomes.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Utility and waiting space</dd></div>
+							<div><dt>Systems</dt><dd>USB power, charging blocks, and open seating</dd></div>
+							<div><dt>Interlocks</dt><dd>Study time, phone battery, and public visibility</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="3 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="residence-hall-tv-lounge">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for residence hall TV lounge.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Residence Hall TV Lounge</h3>
+						<p>The TV lounge is a social space, but it is also a device-sharing zone where remotes, streaming logins, and casual gatherings all intersect. It shows how low-stakes communal use can still expand the surface area of a digital environment.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Shared media and downtime</dd></div>
+							<div><dt>Systems</dt><dd>Screen controls, streaming devices, and lounge seating</dd></div>
+							<div><dt>Interlocks</dt><dd>Residence patterns, group study, and late-night use</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="3 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="douglass-nfc-kiosk">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for Douglass NFC kiosk.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Douglass NFC Kiosk</h3>
+						<p>Food service looks mundane, but the payment tap quietly combines device identity, purchase timing, and foot traffic. That makes the kiosk a useful marker for how everyday convenience connects financial trust to the campus map.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Commerce and routine purchase</dd></div>
+							<div><dt>Systems</dt><dd>NFC reader, payment token, and transaction logs</dd></div>
+							<div><dt>Interlocks</dt><dd>Meal timing, dining density, and social traffic</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="2 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+
+				<article class="location-card" id="transit-wi-fi-node">
+					<figure>
+						<img src="images/placeholder.svg" alt="Placeholder image for transit Wi-Fi node.">
+						<figcaption>Representative location view (placeholder).</figcaption>
+					</figure>
+					<div class="location-copy">
+						<h3>Transit Wi-Fi Node</h3>
+						<p>The waiting area at the edge of campus acts like a bridge between systems. People pause, devices scan, rides arrive, and public connectivity spills across the boundary. That makes the location useful for understanding how one network layer can influence another in seconds.</p>
+						<dl class="location-data">
+							<div><dt>Zone</dt><dd>Transit edge and connectivity spillover</dd></div>
+							<div><dt>Systems</dt><dd>Wi-Fi, shuttle timing, and crowd movement</dd></div>
+							<div><dt>Interlocks</dt><dd>Night travel, weather, and campus-to-city transitions</dd></div>
+						</dl>
+						<div class="rating-block">
+							<div class="scoreline"><span class="score-label">Exposure</span><span class="score" aria-label="4 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span></span></div>
+							<div class="scoreline"><span class="score-label">After-dark comfort</span><span class="score" aria-label="3 out of 5"><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot on"></span><span class="score-dot"></span><span class="score-dot"></span></span></div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section class="panel legend-panel" id="credits" aria-labelledby="legend-title">
+			<div class="section-head">
+				<div>
+					<p class="section-kicker">Rating legend and credits</p>
+					<h2 id="legend-title">How to read the symbols on this page</h2>
+				</div>
+			</div>
+
+			<div class="legend-columns">
+				<div class="legend-block">
+					<h3>Rating legend</h3>
+					<p class="legend-line"><span class="score-dot on"></span> filled dot = higher exposure or comfort, depending on the label</p>
+					<p class="legend-line"><span class="score-dot"></span> empty dot = lower exposure or comfort</p>
+					<p class="legend-line">Five dots are used on every profile card so the values can be compared quickly across locations.</p>
+				</div>
+				<div class="legend-block">
+					<h3>Credits</h3>
+					<p>Map layers: Leaflet with CARTO Voyager tiles (© CARTO). Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors.</p>
+					<p>Marker icons and popup labels: created for this project by the Rutgers Digital Safety Lab.</p>
+					<p>Representative location images: project asset folder (see <em>images/</em>).</p>
+					<p>Page concept, labels, and symbolic ratings: original draft by the project team.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p>&copy; 2026 Rutgers Digital Safety Lab (fictional), All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
