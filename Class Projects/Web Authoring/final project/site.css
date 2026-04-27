@@ -294,8 +294,7 @@ footer p {
 .pictorial-page .gallery figure img {
 	display: block;
 	width: 100%;
-	aspect-ratio: 4 / 3;
-	object-fit: contain;
+	height: auto;
 	background: #0a0f14;
 	filter: contrast(1.05) saturate(0.9);
 	border-radius: 0;
