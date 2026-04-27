@@ -55,11 +55,11 @@ const campusNodes = [
 		profile: "#douglass-nfc-kiosk",
 	},
 	{
-		name: "Transit Wi-Fi Node",
+		name: "Service Elevator",
 		category: "route",
 		coords: [40.5009, -74.4447],
-		description: "Waiting areas bridge campus and city networks, so location, connectivity, and timing all intersect here.",
-		profile: "#transit-wi-fi-node",
+		description: "Enclosed vertical circulation concentrates short interactions, access panels, and occasional surveillance; elevators can affect privacy and safety differently than open waiting areas.",
+		profile: "#elevator",
 	},
 ];
 
@@ -90,6 +90,31 @@ const markers = campusNodes.map((node) => {
 
 const campusGroup = L.featureGroup(markers);
 map.fitBounds(campusGroup.getBounds().pad(0.22));
+// Public-hotspot markers (no coverage/heatmap data available)
+const publicHotspots = [
+	{ name: "Alexander Library Wi‑Fi Commons", coords: [40.4989, -74.4467] },
+	{ name: "Student Center (public Wi‑Fi nearby)", coords: [40.5019, -74.4466] },
+	{ name: "Residence Hall TV Lounge (guest Wi‑Fi)", coords: [40.4992, -74.4529] },
+];
+
+const hotspotMarkers = L.layerGroup(
+	publicHotspots.map((h) => {
+		const icon = L.divIcon({
+			className: `map-marker marker-connect`,
+			html: `<div class="map-marker-shell marker-connect"><span>${markerIcons.connect}</span></div>`,
+			iconSize: [42, 42],
+			iconAnchor: [21, 42],
+			popupAnchor: [0, -36],
+		});
+		return L.marker(h.coords, { icon }).bindPopup(`<strong>${h.name}</strong>`);
+	})
+);
+
+// Only expose the hotspot layer in the overlay control
+L.control.layers(null, { 'Public hotspots': hotspotMarkers }, { collapsed: false }).addTo(map);
+
+// Add hotspots by default
+hotspotMarkers.addTo(map);
 
 const legend = L.control({ position: "bottomright" });
 
