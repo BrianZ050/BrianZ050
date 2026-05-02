@@ -287,12 +287,30 @@ body.map-page .location-card figure {
 }
 
 body.map-page .location-card img {
+	display: block;
 	width: 100%;
 	height: 100%;
-	max-height: 220px;
 	object-fit: cover;
 	border-radius: 14px;
 	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Ensure the figure reserves a viewport for the image so it doesn't collapse */
+body.map-page .location-card figure {
+    min-height: 220px;
+    overflow: hidden;
+}
+
+@media (max-width: 980px) {
+    /* On narrow viewports, allow images to be taller when cards stack */
+    body.map-page .location-card figure {
+        min-height: 180px;
+    }
+    body.map-page .location-card img {
+        height: auto;
+        max-height: 320px;
+        width: 100%;
+    }
 }
 
 body.map-page .location-card figcaption {
