@@ -23,64 +23,94 @@
   </header>
 
   <header class="site-header about-hero">
-    <p class="kicker">About</p>
-    <h1>About the Rutgers Digital Safety Layer</h1>
-    <p class="subtitle">Who made this site, and how the project has evolved.</p>
+    <div class="about-hero-copy">
+      <p class="kicker">About the project</p>
+      <h1>Meet the people and process behind the Rutgers Digital Safety Layer.</h1>
+      <p class="subtitle">This fictional editorial team shaped the site as a campus safety atlas, blending field research, spatial data, and visual storytelling into one cohesive project.</p>
+    </div>
+
+    <aside class="about-note" aria-label="About page highlights">
+      <p class="note-label">What’s inside</p>
+      <ul>
+        <li>Five contributor profiles</li>
+        <li>A fictional history timeline</li>
+        <li>Photos, diagram, and sketch-style artifacts</li>
+      </ul>
+    </aside>
   </header>
 
   <main>
+    <section class="panel mission-panel" aria-labelledby="mission-title">
+      <div class="section-head">
+        <h2 id="mission-title">About This Site</h2>
+      </div>
+      <p>This site presents a fictional campus safety project as an editorial atlas: a space to map, question, and visualize how everyday locations collect people, systems, and data. The goal is to make the project feel readable, thoughtful, and grounded in the work of a small creative team.</p>
+    </section>
+
     <section class="panel contributors-panel" aria-labelledby="contributors-title">
       <div class="section-head">
         <h2 id="contributors-title">Contributor Profiles</h2>
-        <p class="map-note">Profiles include portrait, role, and a short professional bio for the site editor and collaborators.</p>
+        <p class="map-note">Each profile includes a portrait, role in production, and a short professional biography.</p>
       </div>
 
       <div class="profile-grid">
         <article class="contributor-card">
           <figure>
-            <img src="images/placeholder.svg" alt="Site editor portrait placeholder">
+            <img src="images/about-portrait-brian.svg" alt="Illustrated portrait of Brian Z., the site editor">
             <figcaption>Site editor</figcaption>
           </figure>
           <div class="contrib-copy">
+            <p class="contrib-role">Site Editor / Project Lead</p>
             <h3>Brian Z.</h3>
-            <p class="contrib-role">Site Editor — Project Lead</p>
-            <p class="contrib-bio">Brian curated location data, designed the visual language, and coordinated the site build. Brian's research focuses on human-centered security and campus privacy design.</p>
+            <p class="contrib-bio">Brian shaped the editorial voice, curated the map content, and coordinated the final build. His research interests focus on human-centered security, campus privacy, and accessible digital storytelling.</p>
           </div>
         </article>
 
         <article class="contributor-card">
           <figure>
-            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <img src="images/about-portrait-alex.svg" alt="Illustrated portrait of Alex Moreno, the data analyst">
             <figcaption>Research & data</figcaption>
           </figure>
           <div class="contrib-copy">
+            <p class="contrib-role">Data Analyst / Mapping Researcher</p>
             <h3>Alex Moreno</h3>
-            <p class="contrib-role">Data Analyst</p>
-            <p class="contrib-bio">Alex collected and cleaned spatial data, validated coordinates, and built the marker dataset. Alex specializes in mapping workflows and reproducible pipelines.</p>
+            <p class="contrib-bio">Alex collected and cleaned spatial data, validated coordinates, and built the marker dataset. He specializes in mapping workflows, reproducible pipelines, and clear documentation for collaborative projects.</p>
           </div>
         </article>
 
         <article class="contributor-card">
           <figure>
-            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <img src="images/about-portrait-samira.svg" alt="Illustrated portrait of Dr. Samira Patel, the interaction designer">
             <figcaption>Design & accessibility</figcaption>
           </figure>
           <div class="contrib-copy">
+            <p class="contrib-role">Interaction Designer / Accessibility Lead</p>
             <h3>Dr. Samira Patel</h3>
-            <p class="contrib-role">Interaction Designer</p>
-            <p class="contrib-bio">Samira designed the site interactions and accessibility features, ensuring popups and profiles remained keyboard and screen-reader friendly.</p>
+            <p class="contrib-bio">Samira designed the site interactions and accessibility features, making sure the map, cards, and profile content stayed keyboard-friendly, readable, and easy to scan on smaller screens.</p>
           </div>
         </article>
 
         <article class="contributor-card">
           <figure>
-            <img src="images/placeholder.svg" alt="Collaborator portrait placeholder">
+            <img src="images/about-portrait-jordan.svg" alt="Illustrated portrait of Jordan Lee, the frontend developer">
             <figcaption>Frontend & testing</figcaption>
           </figure>
           <div class="contrib-copy">
+            <p class="contrib-role">Frontend Developer / QA Lead</p>
             <h3>Jordan Lee</h3>
-            <p class="contrib-role">Frontend Developer</p>
-            <p class="contrib-bio">Jordan implemented the interactive map, marker styling, and responsive layout. They also coordinated cross-browser testing and performance checks.</p>
+            <p class="contrib-bio">Jordan implemented the interactive layout, marker styling, and responsive behavior. They also coordinated cross-browser testing, performance checks, and polish passes before launch.</p>
+          </div>
+        </article>
+
+        <article class="contributor-card">
+          <figure>
+            <img src="images/about-portrait-mina.svg" alt="Illustrated portrait of Mina Okafor, the editorial producer">
+            <figcaption>Editorial &amp; archive</figcaption>
+          </figure>
+          <div class="contrib-copy">
+            <p class="contrib-role">Editorial Producer / Archive Curator</p>
+            <h3>Mina Okafor</h3>
+            <p class="contrib-bio">Mina organized the history materials, wrote the launch copy, and assembled the visual archive for the about page. Her background blends magazine production, multimedia editing, and exhibit-style storytelling.</p>
           </div>
         </article>
       </div>
@@ -89,43 +119,46 @@
     <section class="panel history-panel" aria-labelledby="history-title">
       <div class="section-head">
         <h2 id="history-title">Project History</h2>
-        <p class="map-note">A short fictional timeline showing how the project grew from idea to prototype.</p>
+        <p class="map-note">A fictional production history showing how the project evolved from concept to final release.</p>
       </div>
 
       <ol class="timeline">
         <li>
           <time datetime="2023-09">Sep 2023</time>
           <h3>Research kickoff</h3>
-          <p>Initial campus interviews and early field notes. The team mapped high-traffic routes and sketched the first safety-layer concept.</p>
-          <img src="images/placeholder.svg" alt="early sketch"/>
+          <p>The project began with campus interviews, field notes, and route sketches. The team pinned the first safety concepts to a shared planning wall.</p>
         </li>
 
         <li>
           <time datetime="2024-02">Feb 2024</time>
           <h3>Data sprint</h3>
-          <p>Alex ran a data sprint to collect coordinates and validate node descriptions. The dataset reached its first stable release.</p>
+          <p>Alex ran the first serious data pass, cleaning locations, validating descriptions, and creating a stable marker set for the map prototype.</p>
         </li>
 
         <li>
           <time datetime="2024-10">Oct 2024</time>
-          <h3>Prototype & usability</h3>
-          <p>First interactive prototype using Leaflet was released to a small test group. Feedback led to improved popups and clearer legend items.</p>
+          <h3>Prototype &amp; usability</h3>
+          <p>The first interactive build was tested with a small review group. Feedback led to simpler popups, better contrast, and clearer legend labels.</p>
         </li>
 
         <li>
           <time datetime="2025-04">Apr 2025</time>
-          <h3>Public demo</h3>
-          <p>The project was shown at a campus demo day. A short demo video was produced to explain the idea to non-technical audiences.</p>
+          <h3>Archive pass</h3>
+          <p>Mina organized launch notes, saved screenshots, and created the visual archive that now shapes this about page.</p>
+        </li>
+
+        <li>
+          <time datetime="2026-05">May 2026</time>
+          <h3>Public release</h3>
+          <p>The project was finalized for class presentation with one last editorial polish, responsive cleanup, and a refined history page for the site.</p>
         </li>
       </ol>
-
-      <!-- audio and video removed per request -->
 
     </section>
 
     <section class="panel credits-panel" aria-labelledby="about-credits">
       <h2 id="about-credits">Credits & License</h2>
-      <p>This fictional project was created for a class assignment. Map layers on other pages use CARTO and OpenStreetMap data where noted; site code and content here are original to the project authors.</p>
+      <p>This fictional project was created for a class assignment. Map layers on other pages use CARTO and OpenStreetMap data where noted; the text, portraits, and history artifacts on this page are original to the project team.</p>
     </section>
   </main>
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait of Brian Z.</title>
+  <desc id="desc">Stylized portrait illustration for the site editor.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#17364d"/>
+      <stop offset="52%" stop-color="#102432"/>
+      <stop offset="100%" stop-color="#071019"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5fe3c3"/>
+      <stop offset="100%" stop-color="#5ca8ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="720" rx="38" fill="url(#bg)"/>
+  <circle cx="470" cy="128" r="114" fill="#5ca8ff" opacity="0.12"/>
+  <circle cx="138" cy="104" r="86" fill="#5fe3c3" opacity="0.14"/>
+  <path d="M72 560c72-96 156-144 228-144s156 48 228 144" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="300" cy="272" r="88" fill="#f1e8db"/>
+  <path d="M176 560c18-92 88-150 124-150h0c36 0 106 58 124 150" fill="#f1e8db"/>
+  <path d="M220 236c14-42 47-66 80-66s66 24 80 66c-14 20-30 33-80 33s-66-13-80-33z" fill="#1d2f3d"/>
+  <circle cx="270" cy="280" r="11" fill="#1d2f3d"/>
+  <circle cx="330" cy="280" r="11" fill="#1d2f3d"/>
+  <path d="M269 318c17 14 45 14 62 0" fill="none" stroke="#1d2f3d" stroke-width="8" stroke-linecap="round"/>
+  <path d="M248 374h104" fill="none" stroke="#5ca8ff" stroke-width="16" stroke-linecap="round" opacity="0.55"/>
+  <text x="48" y="642" fill="#eaf3fb" font-family="Trebuchet MS,Segoe UI,Tahoma,sans-serif" font-size="56" font-weight="700">BZ</text>
+  <text x="48" y="680" fill="#9db4c6" font-family="Trebuchet MS,Segoe UI,Tahoma,sans-serif" font-size="21" letter-spacing="0.18em">SITE EDITOR</text>
+</svg>
