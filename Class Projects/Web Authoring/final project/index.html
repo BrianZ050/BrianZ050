@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rutgers Digital Safety Layer — Home</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+  <body class="home-page">
+  <header class="site-header">
+    <div class="site-shell">
+      <a href="index.html" class="site-logo" aria-label="Rutgers Digital Safety Layer Home">
+        <img src="images/site-logo.svg" alt="Rutgers Digital Safety Lab logo">
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#" class="coming-soon" aria-disabled="true">Feature</a></li>
+          <li><a href="inventory.html">Pictorial</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero" aria-label="Lead">
+      <div class="site-shell panel lead-hero">
+        <div class="lead-copy">
+          <p class="kicker">Rutgers Digital Safety Layer</p>
+          <h1>Exploring campus safety as a layered, visual atlas</h1>
+          <p class="subtitle">A class project combining maps, pictorial essays, and tool reviews.</p>
+          <p class="lead-intro">This site collects reviews of field tools, a pictorial inventory of adversarial and infrastructure artifacts, and an interactive campus map that ties location profiles to symbolic ratings. The project demonstrates how physical objects, connectivity, and routine interactions shape a campus-scale safety surface. Use the links below to jump directly to reviews, the pictorial inventory, or the interactive map.</p>
+          <p><a class="jump" href="#showcase">See the showcase</a></p>
+        </div>
+        <div class="lead-graphic" aria-hidden="true">
+          <!-- decorative SVG blob -->
+          <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" width="100%" height="100%">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1">
+                <stop offset="0" stop-color="#53a7ff" stop-opacity="0.9" />
+                <stop offset="1" stop-color="#4dd2a8" stop-opacity="0.9" />
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="transparent"/>
+            <g transform="translate(40,20)">
+              <path d="M80 20 C 160 -20, 300 -10, 380 30 C 460 70, 480 190, 380 260 C 300 310, 140 320, 60 270 C -20 220 -10 80 80 20 Z" fill="url(#lg)" opacity="0.95"></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="showcase" class="showcase site-shell">
+      <h2 class="kicker">Showcase</h2>
+      <p class="subtitle">Direct links to the three primary content areas of this project.</p>
+      <div class="showcase-grid">
+        <article class="panel">
+          <figure>
+            <a href="reviews.html">
+              <svg width="100%" height="160" viewBox="0 0 400 220" role="img" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b1016" />
+                <circle cx="80" cy="80" r="60" fill="#53a7ff" opacity="0.14" />
+              </svg>
+            </a>
+            <figcaption>
+              <h3><a href="reviews.html">Reviews</a></h3>
+              <p class="lead-note">Tool reviews (Flipper Zero, HackRF One) with pros/cons and reference links.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="panel">
+          <figure>
+            <a href="inventory.html">
+              <svg width="100%" height="160" viewBox="0 0 400 220" role="img" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b1016" />
+                <rect x="40" y="30" width="320" height="140" fill="#4dd2a8" opacity="0.12" />
+              </svg>
+            </a>
+            <figcaption>
+              <h3><a href="inventory.html">Pictorial Inventory</a></h3>
+              <p class="lead-note">Photo essays documenting adversarial tools and the campus attack surface.</p>
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="panel">
+          <figure>
+            <a href="map.html">
+              <svg width="100%" height="160" viewBox="0 0 400 220" role="img" aria-hidden="true">
+                <rect width="100%" height="100%" fill="#0b1016" />
+                <path d="M20 140 L80 60 L180 120 L300 40 L380 120" stroke="#ffce67" stroke-width="6" fill="none" opacity="0.12" />
+              </svg>
+            </a>
+            <figcaption>
+              <h3><a href="map.html">Map</a></h3>
+              <p class="lead-note">Interactive Leaflet map of campus nodes with profile cards and legend.</p>
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell">
+      <p>&copy; 2026 Rutgers Digital Safety Lab (fictional), All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
